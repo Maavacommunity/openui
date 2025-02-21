@@ -9,7 +9,7 @@ services:
       - "7878:7878"
     environment:
       - OLLAMA_HOST=http://ollama:11434
-      - OPENAI_API_KEY
+      - OPENAI_API_KEY=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
       - ANTHROPIC_API_KEY
       - GROQ_API_KEY
     # env_file:
