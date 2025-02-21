@@ -1,12 +1,4 @@
 services:
-  ollama:
-    container_name: ollama
-    image: ollama/ollama:latest
-    ports:
-      - "11434:11434"
-    volumes:
-      - ${OLLAMA_VOLUME_PATH:-ollama}:/root/.ollama
-
   openui:
     container_name: openui
     image: ghcr.io/wandb/openui:latest
@@ -22,6 +14,14 @@ services:
       - GROQ_API_KEY
     # env_file:
     #   - .env
+
+  ollama:
+    container_name: ollama
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ${OLLAMA_VOLUME_PATH:-ollama}:/root/.ollama
 
 volumes:
   ollama:
