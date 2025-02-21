@@ -10,7 +10,7 @@ services:
     environment:
       - OLLAMA_HOST=http://ollama:11434
       - OPENAI_API_KEY=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
-      - ANTHROPIC_API_KEY
+      - ANTHROPIC_API_KEY=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
       - GROQ_API_KEY
     # env_file:
     #   - .env
